@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0">
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/random/1200x400/?phone,contact"
+          class="d-block mx-0 w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-3">
+    <h1 class="text-center">Contact Us</h1>
+    <form method="post" action="/contact">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name"
+          aria-describedby="emailHelp" placeholder="Enter your name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email"
+          aria-describedby="emailHelp" placeholder="Enter your e-mail">
+        <div id="emailHelp" class="form-text">We'll never share your email with
+          anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control" id="phone" name="phone"
+          aria-describedby="emailHelp" placeholder="Enter your number">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label"> Tell me more about yourself</label>
+        <textarea class="form-control" id="desc" name="desc"> </textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+
+  {% endblock body %}
