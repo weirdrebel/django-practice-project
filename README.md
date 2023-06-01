@@ -1,2 +1,2 @@
-# django-practice-projects
+# django-practice-project
 Python-Django Practice Repository.
